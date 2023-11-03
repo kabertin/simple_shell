@@ -109,7 +109,10 @@ void _errorputs(char *c);
 int _errorputchar(char c);
 int _putfiledes(char c, int fd);
 int _putsfile(char *c, int fd);
-
+int find_builtin(info_t *info);
+int hsh(info_t *info, char **av);
+void fork_command(info_t *);
+void find_command(info_t *);
 
 
 #endif
