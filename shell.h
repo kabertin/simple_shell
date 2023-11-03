@@ -99,7 +99,10 @@ typedef struct arginfo
 	list_t *alias;
 } info_t
 
-
+int is_command(info_t *info, char *path);
+char *duplicate_chars(char *paths, int begin, int end);
+char *get_path(info_t *info, char *paths, char *command);
+int loophsh(char **);
 
 
 
