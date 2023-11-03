@@ -97,7 +97,9 @@ typedef struct arginfo
 	list_t *history;
 	char **buffer_cmd;
 	list_t *alias;
-} info_t
+} info_t;
+
+
 
 
 
