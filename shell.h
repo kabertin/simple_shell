@@ -101,8 +101,14 @@ typedef struct arginfo
 
 
 
-
-
+int is_command(info_t *info, char *path);
+char *duplicate_chars(char *paths, int begin, int end);
+char *get_path(info_t *info, char *paths, char *command);
+int loophsh(char **);
+void _errorputs(char *c);
+int _errorputchar(char c);
+int _putfiledes(char c, int fd);
+int _putsfile(char *c, int fd);
 
 
 
