@@ -113,6 +113,9 @@ int find_builtin(info_t *info);
 int hsh(info_t *info, char **av);
 void fork_command(info_t *);
 void find_command(info_t *);
-
+char *_strcpy(char *dest, char *src);
+char *_strdup(const char *s);
+void _puts(char *s);
+int _putchar(char c);
 
 #endif
