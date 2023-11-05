@@ -117,5 +117,12 @@ char *_strcpy(char *dest, char *src);
 char *_strdup(const char *s);
 void _puts(char *s);
 int _putchar(char c);
-
+int _strlen(char *str);
+int _stringcmp(char *str1, char *str);
+char *begin_wth(const char *h, const char *sub);
+char *_stringconc(char *to, char *from);
+char *_strcpy1(char *d, char *s, int c;)
+char *_strconc(char *to, char *from, int bytes);
+char *_strchar(char *str, char chr);
+int ptr_free(void **ptr);
 #endif
