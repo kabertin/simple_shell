@@ -129,4 +129,8 @@ char **str_word(char *s, char *d);
 char *_memset(char *m, char bytes, unsugned int n);
 void str_free(char **str);
 void *realloc(void *p, unsigned int old, unsigned int nw);
+int interact(info_t *);
+int is_delimiter(char, char *);
+int _isalphabet(int);
+int _atoi(char *);
 #endif
