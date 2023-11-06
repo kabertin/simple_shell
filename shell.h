@@ -125,4 +125,8 @@ char *_strcpy1(char *d, char *s, int c;)
 char *_strconc(char *to, char *from, int bytes);
 char *_strchar(char *str, char chr);
 int ptr_free(void **ptr);
+char **str_word(char *s, char *d);
+char *_memset(char *m, char bytes, unsugned int n);
+void str_free(char **str);
+void *realloc(void *p, unsigned int old, unsigned int nw);
 #endif
