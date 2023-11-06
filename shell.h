@@ -133,4 +133,9 @@ int interact(info_t *);
 int is_delimiter(char, char *);
 int _isalphabet(int);
 int _atoi(char *);
+int _atoierror(char *);
+void delete_comments(char *);
+int print_delimiter(int, int);
+char *convert_number(long int, int, int);
+void print_error(info_t *, char *);
 #endif
