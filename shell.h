@@ -141,4 +141,9 @@ void print_error(info_t *, char *);
 int shell_quit(info_t *);
 int change_dir(info_t *);
 int change_dir1(info_t *);
+int hist_display(info_t *his);
+int unset_alias(info_t *info, char *s);
+int set_alias(info_t *info, char *s);
+int _print_alias(list_t *index);
+int myalias(info_t *info);
 #endif
