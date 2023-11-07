@@ -138,4 +138,7 @@ void delete_comments(char *);
 int print_delimiter(int, int);
 char *convert_number(long int, int, int);
 void print_error(info_t *, char *);
+int shell_quit(info_t *);
+int change_dir(info_t *);
+int change_dir1(info_t *);
 #endif
