@@ -138,7 +138,7 @@ void delete_comments(char *);
 int print_delimiter(int, int);
 char *convert_number(long int, int, int);
 void print_error(info_t *, char *);
-int shell_quit(info_t *);
+int shell_quit(info_t *)i;
 int change_dir(info_t *);
 int change_dir1(info_t *);
 int hist_display(info_t *his);
@@ -146,4 +146,7 @@ int unset_alias(info_t *info, char *s);
 int set_alias(info_t *info, char *s);
 int _print_alias(list_t *index);
 int myalias(info_t *info);
+void _clear_info(info_t *info);
+void _set_info(info_t *info, char **av);
+void _free_info(info_t *info, int a);
 #endif
