@@ -130,6 +130,7 @@ char *_memset(char *m, char bytes, unsugned int n);
 void str_free(char **str);
 void *realloc(void *p, unsigned int old, unsigned int nw);
 int interact(info_t *);
+<<<<<<< HEAD
 int is_delimiter(char d, char *del);
 int _isalphabet(int d);
 int _atoi(char *s);
@@ -146,4 +147,25 @@ ssize_t get_input(info_t *info);
 ssize_t input_buffer(info_t *info, char **buffer, size_t *length);
 int _getline(info_t *info, char **ptr, size_t *length);
 ssize_t read_buffer(info_t *info, char *buffer, size_t *a);
+=======
+int is_delimiter(char, char *);
+int _isalphabet(int);
+int _atoi(char *);
+int _atoierror(char *);
+void delete_comments(char *);
+int print_delimiter(int, int);
+char *convert_number(long int, int, int);
+void print_error(info_t *, char *);
+int shell_quit(info_t *)i;
+int change_dir(info_t *);
+int change_dir1(info_t *);
+int hist_display(info_t *his);
+int unset_alias(info_t *info, char *s);
+int set_alias(info_t *info, char *s);
+int _print_alias(list_t *index);
+int myalias(info_t *info);
+void _clear_info(info_t *info);
+void _set_info(info_t *info, char **av);
+void _free_info(info_t *info, int a);
+>>>>>>> d4b415ae84cedae08a3ea7d94ff4aab30586bffb
 #endif
