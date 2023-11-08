@@ -6,7 +6,7 @@
  * Return: Always 0;
  */
 
-void delete_comments(char *buffer)
+void delete_comment(char *buffer)
 {
 	int i;
 
