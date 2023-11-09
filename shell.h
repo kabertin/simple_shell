@@ -173,4 +173,13 @@ int write_hist(info_t *info);
 int build_histlist(info_t *info, char *buffer, int linec);
 int renumber_hist(info_t *info);
 int read_hist(info_t *info);
+char *_getenv(info_t *info, const char *call);
+int _myenv(info_t *info);
+int _mysetenv(info_t *info);
+int _myunsetenv(info_t *info);
+int populate_env_list(info_t *info);
+char **get_environ(info_t *info);
+int _setenv(info_t *info, char *m, char *n);
+int _unsetenv(info_t *info, char *str);
+
 #endif
