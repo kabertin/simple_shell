@@ -168,4 +168,9 @@ void _clear_info(info_t *info);
 void _set_info(info_t *info, char **av);
 void _free_info(info_t *info, int a);
 >>>>>>> d4b415ae84cedae08a3ea7d94ff4aab30586bffb
+char *get_history(info_t *info);
+int write_hist(info_t *info);
+int build_histlist(info_t *info, char *buffer, int linec);
+int renumber_hist(info_t *info);
+int read_hist(info_t *info);
 #endif
