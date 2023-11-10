@@ -181,5 +181,10 @@ int populate_env_list(info_t *info);
 char **get_environ(info_t *info);
 int _setenv(info_t *info, char *m, char *n);
 int _unsetenv(info_t *info, char *str);
+void free_list(list_t **ptr_head);
+int node_ind_del(list_t **head, unsigned int index);
+size_t print_list(const list_t *h_ptr);
+list_t *node_end_up(list_t **head, const char *str, int num);
+list_t *add_node(list_t **head, const char *str, int num);
 
 #endif
