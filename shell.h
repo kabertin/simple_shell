@@ -191,4 +191,9 @@ size_t _print_list(const list_t *x);
 list_t *node_start(list_t *index, char *p, char c);
 ssize_t get_node_index(list_t *h, list_t *node);
 char **list_to_str(list_t *h);
+int _replace_string(char **previous, char current);
+int _replace_alias(info_t *info);
+void _check_chain(info *info, char *buffer, size_t *b, size_t a, size_t length);
+int _is_chain(info_t *info, char *buffer, size_t *b);
+int _replace_variables(info_t *info);
 #endif
