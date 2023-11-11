@@ -186,5 +186,9 @@ int node_ind_del(list_t **head, unsigned int index);
 size_t print_list(const list_t *h_ptr);
 list_t *node_end_up(list_t **head, const char *str, int num);
 list_t *add_node(list_t **head, const char *str, int num);
-
+size_t list_length(const list_t *x);
+size_t _print_list(const list_t *x);
+list_t *node_start(list_t *index, char *p, char c);
+ssize_t get_node_index(list_t *h, list_t *node);
+char **list_to_str(list_t *h);
 #endif
