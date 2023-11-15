@@ -99,8 +99,6 @@ typedef struct arginfo
 	list_t *alias;
 } info_t;
 
-
-
 int is_command(info_t *info, char *path);
 char *duplicate_chars(char *paths, int begin, int end);
 char *get_path(info_t *info, char *paths, char *command);
@@ -208,5 +206,16 @@ int chk_cmd(char **cmand, char *input, int ch, char **av);
 int path_command(char **cmand);
 char *builder(char *tok, char *val);
 char *get_env(char *name);
+int _display_env(__attribute__((unused)) char **command, __attribut_(_(unused)) int x);
+int _display_aid(char **command, __attribute__((unused))int x);
+int echo_ex(char **command, int stat);
+int _printing_echo(char **command);
+int _his_display(__attribute__((unused))char **cmd, __attribute__((unused))int stat);
+void _exitting(char **command, char *in, char **av, int count);
+int _cdir(char **command, __attribute__((unused))int x);
+void sig_hand(int s);
+void file_reader(char *fn, char **av);
+void file_treater(char *l, int count, FILE *filedesc, char **av);
+void exit_for_file(char **command, char *l, FILE *filedesc);
 
 #endif
