@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <unistd>
+#include <unistd.h>
 #include <string.h>
 #include <limits.h>
 #include <sys/wait.h>
@@ -52,7 +52,7 @@ typedef struct strli
 typedef struct builtin
 {
 	char *bu_cmd;
-	int (*func)(info_t*);
+	int (*func)(info_t *);
 } builtin_table;
 
 /**
@@ -126,11 +126,10 @@ char *_strconc(char *to, char *from, int bytes);
 char *_strchar(char *str, char chr);
 int ptr_free(void **ptr);
 char **str_word(char *s, char *d);
-char *_memset(char *m, char bytes, unsugned int n);
+char *_memset(char *m, char bytes, unsigned int n);
 void str_free(char **str);
 void *realloc(void *p, unsigned int old, unsigned int nw);
 int interact(info_t *);
-<<<<<<< HEAD
 int is_delimiter(char d, char *del);
 int _isalphabet(int d);
 int _atoi(char *s);
@@ -147,18 +146,9 @@ ssize_t get_input(info_t *info);
 ssize_t input_buffer(info_t *info, char **buffer, size_t *length);
 int _getline(info_t *info, char **ptr, size_t *length);
 ssize_t read_buffer(info_t *info, char *buffer, size_t *a);
-=======
 int is_delimiter(char, char *);
-int _isalphabet(int);
-int _atoi(char *);
-int _atoierror(char *);
 void delete_comments(char *);
-int print_delimiter(int, int);
-char *convert_number(long int, int, int);
-void print_error(info_t *, char *);
 int shell_quit(info_t *)i;
-int change_dir(info_t *);
-int change_dir1(info_t *);
 int hist_display(info_t *his);
 int unset_alias(info_t *info, char *s);
 int set_alias(info_t *info, char *s);
@@ -167,7 +157,6 @@ int myalias(info_t *info);
 void _clear_info(info_t *info);
 void _set_info(info_t *info, char **av);
 void _free_info(info_t *info, int a);
->>>>>>> d4b415ae84cedae08a3ea7d94ff4aab30586bffb
 char *get_history(info_t *info);
 int write_hist(info_t *info);
 int build_histlist(info_t *info, char *buffer, int linec);
@@ -184,7 +173,7 @@ int _unsetenv(info_t *info, char *str);
 void free_list(list_t **ptr_head);
 int node_ind_del(list_t **head, unsigned int index);
 size_t print_list(const list_t *h_ptr);
-list_t *node_end_up(list_t **head, const char *str, int num);
+list_t *node_end_up(list_t **head, const char *str, int um);
 list_t *add_node(list_t **head, const char *str, int num);
 size_t list_length(const list_t *x);
 size_t _print_list(const list_t *x);
@@ -193,7 +182,31 @@ ssize_t get_node_index(list_t *h, list_t *node);
 char **list_to_str(list_t *h);
 int _replace_string(char **previous, char current);
 int _replace_alias(info_t *info);
-void _check_chain(info *info, char *buffer, size_t *b, size_t a, size_t length);
+void _check_chain(info_t *info, char *buffer, size_t *b, size_t a, size_t length);
 int _is_chain(info_t *info, char *buffer, size_t *b);
 int _replace_variables(info_t *info);
+void *_reallocation(void *ptr, unsigned int init_size, unsigned int end_size);
+void all_free(char **command, char *line);
+char *copy_mem(char *dest, char *src, unsigned int size);
+void *array_fill(void *c, int element, unsigned int length);
+void *callocation(unsigned int size);
+int built_in_check(char **command);
+void environ_creat(char **envir);
+void print_error1(char *input, int c, char **av);
+char **command_pars(char *in);
+void print_num(unsigned int num);
+void print_num_int(int num);
+unsigned int check_delimiter(char ch, const char *str);
+char *string_to_k(char *str, const char *delimiter);
+int is_alph(int ch);
+char *_itoa(unsigned int num);
+void rev_array(char *array, int length);
+int integer_len(int number);
+void pri_error(char **av, int ch, char **command);
+int hand_bu(char **cmand, int error);
+int chk_cmd(char **cmand, char *input, int ch, char **av);
+int path_command(char **cmand);
+char *builder(char *tok, char *val);
+char *get_env(char *name);
+
 #endif

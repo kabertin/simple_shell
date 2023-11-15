@@ -19,4 +19,3 @@ int build_histlist(info_t *info, char *buffer, int linec)
 		info->history = index;
 	return (0);
 }
-
