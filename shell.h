@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <unistd>
+#include <unistd.h>
 #include <string.h>
 #include <limits.h>
 #include <sys/wait.h>
@@ -196,4 +196,15 @@ int _replace_alias(info_t *info);
 void _check_chain(info *info, char *buffer, size_t *b, size_t a, size_t length);
 int _is_chain(info_t *info, char *buffer, size_t *b);
 int _replace_variables(info_t *info);
+int _display_env(__attribute__((unused)) char **command, __attribut_(_(unused)) int x);
+int _display_aid(char **command, __attribute__((unused))int x);
+int echo_ex(char **command, int stat);
+int _printing_echo(char **command);
+int _his_display(__attribute__((unused))char **cmd, __attribute__((unused))int stat);
+void _exitting(char **command, char *in, char **av, int count);
+int _cdir(char **command, __attribute__((unused))int x);
+void sig_hand(int s);
+void file_reader(char *fn, char **av);
+void file_treater(char *l, int count, FILE *filedesc, char **av);
+void exit_for_file(char **command, char *l, FILE *filedesc);
 #endif
